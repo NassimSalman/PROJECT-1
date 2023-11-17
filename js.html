@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+          height: 100vh;
+          /* 100 viewport height units */
+          /* display: flex;
+          justify-content: space-around; */
+          padding: 40px;
+          /* Set display mode to flex */
+      }
+
+      #card-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 20px;
+          /* justify-content: center; */
+          justify-items: center;
+          align-content: center
+      }
+
+      .card {
+          margin-top: 30px;
+          height: auto;
+          width: 300px;
+          border-radius: 8px;
+          overflow: hidden;
+          box-shadow: 4px 4px 8px black;
+          position: relative;
+
+
+
+      }
+
+
+
+      .card__button {
+          text-decoration: none;
+          /* Remove text decoration */
+          background-color: #4caf50;
+          /* Set background color to hex '4caf50' */
+          padding: 8px 16px;
+          /* Vertical padding: 8px, Horizontal padding: 16px */
+          transition: background-color 0.3s ease;
+          /* Add transition effect to background color */
+      }
+
+      /* Hover Effect */
+      .card__button:hover {
+          background-color: #45a049;
+          /* Change background color on hover to hex '45a049' */
+      }
+
+
+      .card--dark {
+          background-color: #333333;
+          color: #cccccc;
+          /* Set text color to hex 'cccccc' for the dark theme */
+      }
+
+      /* Dark Card Button Styles */
+      .card--dark .card__button {
+          background-color: #1e824c;
+          /* Set background color to hex '1e824c' */
+      }
+
+      /* Hover Effect for Dark Card Button */
+      .card--dark .card__button:hover {
+          background-color: #1a6c3d;
+          /* Change background color on hover to hex '1a6c3d' */
+      }
+
+
+
+
+      .card__header {
+          display: flexbox;
+          justify-content: space-between;
+          align-content: space-between;
+          padding: 8px 16px;
+      }
+
+      .card__image {
+          width: 100%;
+          /* Set width to 100% of the parent/closest relative element */
+          height: auto;
+          /* Maintain aspect ratio by setting height to auto */
+          pointer-events: none;
+      }
+
+      .card__content {
+          padding: 16px;
+      }
+
+      .card__title {
+          font-size: 18px;
+          /* Set font size to 18 pixels */
+          font-weight: bold;
+          /* Make the font bold */
+          margin: 8px;
+          /* Add a margin of 8 pixels on the bottom */
+          position: relative;
+          /* Position the element as relative for the tooltip */
+      }
+
+      .card__title::after {
+          content: "/ " attr(title);
+          /* Set content as the title attribute */
+          position: absolute;
+          width: 140px;
+          opacity: 0;
+          /* Keep it hidden by default */
+          /* Add any additional needed styles for the tooltip */
+      }
+
+      .card__title:hover::after {
+          opacity: 1;
+          /* Set opacity to 1 on hover to show the tooltip */
+          /* Add any additional styles for the tooltip on hover */
+      }
+
+      .card__text {
+          font-size: 14px;
+          /* Set font size to 14 pixels */
+          color: #666666;
+          /* Set text color to hex '666666' */
+          margin-bottom: 16px;
+          /* Add a bottom margin of 16 pixels */
+      }
+
+      .card__price {
+          font-size: 16px;
+          /* Set font size to 16 pixels */
+          margin: 8px;
+          /* Add a top margin of 8 pixels */
+          font-weight: bold;
+          /* Set font weight to bold */
+      }
+
+
+
+
+      #cards-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 20px;
+          justify-content: center;
+          align-content: center;
+      }
+  </style>
+    <!-- session final -->
+    <!-- Task: reset box-sizing, margin, and padding styles on all elements -->
+      
+    <!-- session final -->
+    <!-- Task: give the body of the page a padding of 40 pixels -->
+
+    <!-- session final -->
+    <!-- Task: copy the styles of card elements off the work of previous sessions -->
+
+    <!-- session final -->
+    <!-- Task: add styles for the element with ID 'cards-grid' -->
+    <!-- Hint: set display to grid, with columns template set to auto-fit with minmax 280px -> 1fr -->
+    <!-- Hint: add a gap of 20 pixels between the child elements -->
+    <!-- Hint: use justify-content: center; to center cards horizontally -->
+    <!-- Hint: use align-content: center; to center cards vertically -->
+  </head>
+  <body>
+    <div id="cards-grid">
+    <div class="card"> </div>
+    <div class="card"> </div>
+    <div class="card"> </div> </div>
+    <!-- session final -->
+    <!-- Task: add a script with the logic to populate element corresponding to selector '#cards-grid' with 20 cards -->
+    <!-- Hint: you can use chatGPT if you don't know JavaScript yet
+      - get a reference of the container element '#cards-grid'
+      - run a loop for N times, N being the number of cards in this case, equal to 20
+      - in each iteration create a card, and append it to the container element
+      - a card should have the following structure: <div class="card"> <img /> <div> <h2 title="...">...</h2> <p>$...</p> <p>Description goes here...</p> <a>Read More</a> </div> </div>
+      - remeber to follow BEM convention when giving each element it's class
+    -->
+    <script>
+      let card = document.querySelector('card')
+      console.log (card)
+    </script>
+  </body>
+</html>
